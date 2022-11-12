@@ -1,0 +1,65 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* The '*' selector selects all elements in HTML file. Declaring margin, padding and box-sizing to get rid of default values*/
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* PRE-SET VARIABLES */
+header {
+  width: 100%;
+  background-color: rgb(5, 19, 50);
+  position: fixed;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+.logo {
+  text-decoration: none;
+}
+.logo__color {
+  color: #032dff;
+}
+.logo__bold {
+  font-weight: 600;
+}
+.logo__size {
+  font-size: 30px;
+}
+
+.nav__lists {
+  list-style: none;
+  margin: 0px 10px;
+}
+.nav__link {
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 4px 8px;
+}
+.nav__link--color {
+  color: #ffffff;
+}
+.nav__link:hover {
+  color: #032dff;
+  font-size: 1.2em;
+  transition: 0.3s;
+}
+.nav__link:active {
+  color: #032dff;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
