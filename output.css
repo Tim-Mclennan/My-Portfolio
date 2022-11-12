@@ -9,6 +9,7 @@
 }
 
 /* PRE-SET VARIABLES */
+/*HEADER SECTION*/
 header {
   width: 100%;
   background-color: rgb(5, 19, 50);
@@ -63,3 +64,5 @@ header {
   display: flex;
   align-items: center;
 }
+
+/* HOME SECTION */
