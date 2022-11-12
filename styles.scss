@@ -1,7 +1,7 @@
-/* GOOGLE FONTS */
+/* GOOGLE FONT */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* The '*' selector selects all elements in HTML file. Declaring margin, padding and box-sizing to get rid of default values*/
+/* The '*' selector selects all elements in an HTML file. Declaring margin, padding and box-sizing to get rid of default values*/
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -9,7 +9,10 @@
     box-sizing:border-box;
 }
 
-/* PRE-SET VARIABLES */
+/*For this scss file, I have decided to use the BEM notation to structure my properties. BEM stands for Block Element Modifier. It is an efficient way to change and edit CSS properties at a large scale. */
+
+/* PRE-SET SCSS VARIABLES */
+$header-color: rgb(7, 14, 29);
 $primary-background-color: rgb(5, 19, 50);
 $primary-text-color: #ffffff;
 $section-header-color: #222321;
@@ -20,8 +23,9 @@ $third-text-color: rgb(23, 46, 96);
 /*HEADER SECTION*/
 header {
     width: 100%;
-    background-color: $primary-background-color;
+    background-color: $header-color;
     position: fixed;
+    z-index: 10; //placing header on top, to avoid other elements overlapping it when scrolling.
 }
 
 .nav {
@@ -68,6 +72,7 @@ header {
 
         &:hover {
             color: $secondary-text-color;
+            background-color: $primary-background-color;
             font-size: 1.2em;
             transition: 0.3s;
         }
@@ -84,4 +89,92 @@ header {
 }
 
 /* HOME SECTION */
+.home {
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center; //these last two properties center the entire home section on the middle of the page.
+    padding-top: 20px;
 
+    &__bgcolor {
+        background-color: $primary-background-color;
+    }
+
+    &__content {
+        max-width: 600px; //hard-coding the width.
+        width: 100%;
+        margin: auto; //centering
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 60px;
+    }
+
+    &__img {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%; //making the picture into a circle instead of a rectangle.
+        overflow: hidden;
+        margin: auto;
+        transform: scale(0.7,0.7);
+
+        &--photo {
+            object-position: center;
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__header {
+        font-size: 60px;
+        font-weight: 500;
+
+        &--white {
+            color: $primary-text-color;
+        }
+        &--blue {
+            color: $secondary-text-color;
+        }
+    }
+
+    &__para {
+        font-size: 20px;
+        margin-top: 15px;
+
+        &--white {
+            color: $primary-text-color;
+        }
+        &--blue {
+            color: $secondary-text-color;
+        }
+    }
+
+    &__social {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+
+        &--links {
+            font-size: 50px;
+            color: $primary-text-color;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: $third-text-color;
+
+            &:hover {
+                background-color: $secondary-text-color;
+                transition: 0.3s;
+            }
+        }
+    }
+}

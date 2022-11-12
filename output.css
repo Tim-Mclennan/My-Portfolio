@@ -1,6 +1,6 @@
-/* GOOGLE FONTS */
+/* GOOGLE FONT */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-/* The '*' selector selects all elements in HTML file. Declaring margin, padding and box-sizing to get rid of default values*/
+/* The '*' selector selects all elements in an HTML file. Declaring margin, padding and box-sizing to get rid of default values*/
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -8,12 +8,14 @@
   box-sizing: border-box;
 }
 
-/* PRE-SET VARIABLES */
+/*For this scss file, I have decided to use the BEM notation to structure my properties. BEM stands for Block Element Modifier. It is an efficient way to change and edit CSS properties at a large scale. */
+/* PRE-SET SCSS VARIABLES */
 /*HEADER SECTION*/
 header {
   width: 100%;
-  background-color: rgb(5, 19, 50);
+  background-color: rgb(7, 14, 29);
   position: fixed;
+  z-index: 10;
 }
 
 .nav {
@@ -53,6 +55,7 @@ header {
 }
 .nav__link:hover {
   color: #032dff;
+  background-color: rgb(5, 19, 50);
   font-size: 1.2em;
   transition: 0.3s;
 }
@@ -66,3 +69,80 @@ header {
 }
 
 /* HOME SECTION */
+.home {
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+.home__bgcolor {
+  background-color: rgb(5, 19, 50);
+}
+.home__content {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 60px;
+}
+.home__img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+  transform: scale(0.7, 0.7);
+}
+.home__img--photo {
+  object-position: center;
+  object-fit: cover;
+}
+.home__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.home__header {
+  font-size: 60px;
+  font-weight: 500;
+}
+.home__header--white {
+  color: #ffffff;
+}
+.home__header--blue {
+  color: #032dff;
+}
+.home__para {
+  font-size: 20px;
+  margin-top: 15px;
+}
+.home__para--white {
+  color: #ffffff;
+}
+.home__para--blue {
+  color: #032dff;
+}
+.home__social {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.home__social--links {
+  font-size: 50px;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgb(23, 46, 96);
+}
+.home__social--links:hover {
+  background-color: #032dff;
+  transition: 0.3s;
+}
