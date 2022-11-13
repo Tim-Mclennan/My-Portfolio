@@ -8,7 +8,6 @@
   box-sizing: border-box;
 }
 
-/*For this scss file, I have decided to use the BEM notation to structure my properties. BEM stands for Block Element Modifier. It is an efficient way to change and edit CSS properties at a large scale. */
 /* PRE-SET SCSS VARIABLES */
 /*HEADER SECTION*/
 header {
@@ -32,7 +31,7 @@ header {
   text-decoration: none;
 }
 .logo__color {
-  color: #032dff;
+  color: #1b41ff;
 }
 .logo__bold {
   font-weight: 600;
@@ -48,19 +47,18 @@ header {
 .nav__link {
   text-decoration: none;
   border-radius: 10px;
-  padding: 4px 8px;
+  padding: 5px 10px;
 }
 .nav__link--color {
   color: #ffffff;
 }
 .nav__link:hover {
-  color: #032dff;
+  color: #1b41ff;
   background-color: rgb(5, 19, 50);
-  font-size: 1.2em;
   transition: 0.3s;
 }
 .nav__link:active {
-  color: #032dff;
+  color: #1b41ff;
 }
 
 .navbar {
@@ -70,11 +68,10 @@ header {
 
 /* HOME SECTION */
 .home {
-  min-height: 800px;
+  min-height: 750px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
 }
 .home__bgcolor {
   background-color: rgb(5, 19, 50);
@@ -100,7 +97,7 @@ header {
 }
 .home__img--photo {
   object-position: center;
-  object-fit: cover;
+  object-fit: contain;
 }
 .home__info {
   display: flex;
@@ -117,7 +114,7 @@ header {
   color: #ffffff;
 }
 .home__header--blue {
-  color: #032dff;
+  color: #1b41ff;
 }
 .home__para {
   font-size: 20px;
@@ -127,7 +124,10 @@ header {
   color: #ffffff;
 }
 .home__para--blue {
-  color: #032dff;
+  color: #1b41ff;
+}
+.home__para--bold {
+  font-weight: 800;
 }
 .home__social {
   margin-top: 20px;
@@ -143,6 +143,59 @@ header {
   background-color: rgb(23, 46, 96);
 }
 .home__social--links:hover {
-  background-color: #032dff;
+  border-radius: 30%;
+  background-color: #1b41ff;
   transition: 0.3s;
+}
+
+/* ABOUT SECTION */
+.about {
+  width: 100%;
+}
+.about__bgcolor {
+  background-color: rgb(5, 19, 50);
+}
+.about__heading {
+  color: #242442;
+  font-size: 6rem;
+  text-align: center;
+}
+.about__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 900px;
+  margin: auto;
+}
+.about__intro {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.about__intro--title {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+.about__intro--btn {
+  display: flex;
+  column-gap: 10px;
+  color: #ffffff;
+  border-radius: 5%;
+  background-color: rgb(23, 46, 96);
+  margin-top: 5px;
+  padding: 20px;
+  align-items: center;
+  text-decoration: none;
+  font-size: larger;
+}
+.about__intro--btn:hover {
+  background-color: #1b41ff;
+  transition: 0.3s;
+}
+.about__text {
+  color: #ffffff;
 }
