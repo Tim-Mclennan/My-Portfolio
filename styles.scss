@@ -95,7 +95,7 @@ header {
     align-items: center;
     justify-content: center; //these last two properties center the entire home section on the middle of the page.
     width: 100%;
-    
+
     &__bgcolor {
         background-color: $primary-background-color;
     }
@@ -157,7 +157,7 @@ header {
             color: $secondary-text-color;
         }
         &--bold {
-            font-weight: 800;
+            font-weight: 700;
         }
     }
 
