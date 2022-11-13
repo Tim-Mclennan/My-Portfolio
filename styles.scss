@@ -73,7 +73,8 @@ header {
         &:hover {
             color: $secondary-text-color;
             background-color: $primary-background-color;
-            transition: 0.3s;
+            transition: ease 0.3s;
+            font-size: 1.2rem;
         }
 
         &:active {
@@ -93,7 +94,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center; //these last two properties center the entire home section on the middle of the page.
-
+    width: 100%;
+    
     &__bgcolor {
         background-color: $primary-background-color;
     }
@@ -181,6 +183,7 @@ header {
     }
 }
 
+
 /* ABOUT SECTION */
 .about {
     width: 100%;
@@ -202,6 +205,7 @@ header {
         flex-direction: row;
         width: 900px;
         margin: auto;
+        column-gap: 100px;
     }
 
     &__intro {
@@ -236,5 +240,21 @@ header {
     }
     &__text {
         color: $primary-text-color;
+    }
+}
+
+/* SKILLS SECTION */
+.skills {
+    width: 100%;
+    padding: 50px;
+
+    &__bgcolor {
+        background-color: $primary-background-color;
+    }
+
+    &__heading {
+        color: $section-header-color;
+        font-size: 6rem;
+        text-align: center;
     }
 }

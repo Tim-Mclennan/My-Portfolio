@@ -55,7 +55,8 @@ header {
 .nav__link:hover {
   color: #1b41ff;
   background-color: rgb(5, 19, 50);
-  transition: 0.3s;
+  transition: ease 0.3s;
+  font-size: 1.2rem;
 }
 .nav__link:active {
   color: #1b41ff;
@@ -72,6 +73,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 .home__bgcolor {
   background-color: rgb(5, 19, 50);
@@ -167,6 +169,7 @@ header {
   flex-direction: row;
   width: 900px;
   margin: auto;
+  column-gap: 100px;
 }
 .about__intro {
   display: flex;
@@ -198,4 +201,18 @@ header {
 }
 .about__text {
   color: #ffffff;
+}
+
+/* SKILLS SECTION */
+.skills {
+  width: 100%;
+  padding: 50px;
+}
+.skills__bgcolor {
+  background-color: rgb(5, 19, 50);
+}
+.skills__heading {
+  color: #242442;
+  font-size: 6rem;
+  text-align: center;
 }
