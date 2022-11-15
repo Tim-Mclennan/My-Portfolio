@@ -1,6 +1,11 @@
+/* PREFACE - For this scss file, I have decided to use the BEM notation to structure my properties. BEM stands for 'Block__Element--Modifier'. Using BEM is an efficient way to change and edit CSS properties at a large scale.*/
+/* I have also included the use of external pre-set SCSS variables which contain properties such as colour themes and screen sizes. Using external SCSS files for preset variables is a great tool to use for larger, complex projects as it makes CSS more modular and easier to read.
+
+These external properties are located within a seperate directory (scss-docs) and will be imported with the commands below: */
+/* PRE-SET SCSS VARIABLES */ /* Preset viewport sizes for easier use of media queries.*/
 /* GOOGLE FONT */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-/* The '*' selector selects all elements in an HTML file. Declaring margin, padding and box-sizing to get rid of default values*/
+/* The '*' selector selects all elements in an HTML file. I am declaring the margin, padding and box-sizing properties to get rid of default values throughout the doc. */
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -8,7 +13,6 @@
   box-sizing: border-box;
 }
 
-/* PRE-SET SCSS VARIABLES */
 /*HEADER SECTION*/
 header {
   width: 100%;
