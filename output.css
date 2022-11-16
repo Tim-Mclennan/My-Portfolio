@@ -3,6 +3,7 @@
 
 These external properties are located within a seperate directory (scss-docs) and will be imported with the commands below: */
 /* PRE-SET SCSS VARIABLES */ /* Preset viewport sizes for easier use of media queries.*/
+/* resolution sizes sourced from https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more */
 /* GOOGLE FONT */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 /* The '*' selector selects all elements in an HTML file. I am declaring the margin, padding and box-sizing properties to get rid of default values throughout the doc. */
