@@ -23,17 +23,31 @@ header {
     width: 100%;
     background-color: $header-color;
     position: fixed;
-    z-index: 10; //placing header on top, to avoid other elements overlapping it when scrolling.
+    z-index: 10; //placing header on top, to avoid other elements overlapping it when scrolling.    
 }
 
 .nav {
     display: flex;
-    justify-content: space-between; //seperating the logo from nav links
     align-items: center;
+    justify-content: center;
+    gap: 20px;
     padding: 20px 0; 
-    max-width: 1200px; //hardcoding the width of nav
+    // max-width: 1200px; //hardcoding the width of nav
     width: 100%; //making sure it spreads to 100% of that explicit pixel width
     margin: auto; //This centres the nav element
+    font-size: 2rem;
+
+    @media only screen and (min-width: $tablet) { 
+        font-size: 1.5rem;
+
+    }
+    @media only screen and (min-width: $laptop) { 
+    justify-content: space-around; //seperating the logo from nav links
+
+    }
+    @media only screen and (min-width: $tablet) { 
+
+    }
 }
 
 .logo {
