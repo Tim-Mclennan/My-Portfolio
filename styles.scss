@@ -26,30 +26,6 @@ header {
     z-index: 10; //placing header on top, to avoid other elements overlapping it when scrolling.    
 }
 
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 0; 
-    // max-width: 1200px; //hardcoding the width of nav
-    width: 100%; //making sure it spreads to 100% of that explicit pixel width
-    margin: auto; //This centres the nav element
-    font-size: 2rem;
-
-    @media only screen and (min-width: $tablet) { 
-        font-size: 1.5rem;
-
-    }
-    @media only screen and (min-width: $laptop) { 
-    justify-content: space-around; //seperating the logo from nav links
-
-    }
-    @media only screen and (min-width: $tablet) { 
-
-    }
-}
-
 .logo {
     text-decoration: none; //removes default underline
 
@@ -62,15 +38,33 @@ header {
     }
 
     &__size {
-        font-size: 30px;
+        font-size: 2rem;
     }
 }
 
 .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0; 
+    width: 100%;
+    margin: auto; //This centres the nav element
+    font-size: 1.8rem;
+
+    @media only screen and (min-width: $tablet) { 
+        font-size: 1.5rem;
+    }
+
+    @media only screen and (min-width: $laptop) { 
+    justify-content: space-around; //seperating the logo from nav links
+    font-size: 1.2rem;
+    }
 
     &__lists {
     list-style: none; //removes default bullet points
     margin: 0px 10px;
+    padding: 0px 10px;
     }
 
     &__link {
@@ -86,19 +80,25 @@ header {
             color: $secondary-text-color;
             background-color: $primary-background-color;
             transition: ease 0.3s;
-            font-size: 1.2rem;
+
+            @media only screen and (min-width: $laptop) {
+                //only adding this property for laptop size screens and upwards, as this affect is not as significant on small screens.
+                font-size: 1.3rem; 
+            }
+            
         }
 
         &:active {
             color: $secondary-text-color;
         }
     }
+
+    &__bar {
+        display: flex;
+        align-items: center;
+    }
 }
 
-.navbar {
-    display: flex;
-    align-items: center; 
-}
 
 /* HOME SECTION */
 .home {
