@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="output.css">
     <!-- Link below connects to an external site that provides icons/logos. -->
     <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+
 </head>
 <body>
     <!-- HEADER -->
@@ -16,9 +17,10 @@
         <!-- NAVIGATION -->
         <nav class="nav">
             <!-- LOGO/NAME -->
-            <a href="#" class="logo logo__color logo__bold logo__size   ">Tim.</a>
+            <a href="#" class="nav__logo nav__logo--color nav__logo--bold nav__logo--size   ">Tim.</a>
             <!-- NAV BAR -->
-            <ul class="nav__bar">
+            <ul class="nav__bar" id="navBar">
+                <a class="nav__lists--btn" id="menuClose"><i class="nav__lists--close bx bx-x"></i></a>
                 <li class="nav__lists"><a href="#home" class="nav__link nav__link--color">Home</a></li>
                 <li class="nav__lists"><a href="#about" class="nav__link nav__link--color">About</a></li>
                 <li class="nav__lists"><a href="#skills" class="nav__link nav__link--color">Skills</a></li>
@@ -26,6 +28,9 @@
                 <li class="nav__lists"><a href="#contact" class="nav__link nav__link--color">Contact</a></li>
             </ul>
         </nav>
+        <div class="nav__btn">
+            <i class='nav__btn--color bx bx-menu'  id="navBtn"></i>
+        </div>
     </header>
     <!-- HOME SECTION -->
     <section class="home home__bgcolor">
@@ -70,5 +75,7 @@
 
     <!-- CONTACT SECTION -->
 
+    <script src="script.js"></script>
+    <!--  had to move the script tag after the specified HTML elements in the body, as the JS file wouldn't execute otherwise. -->
 </body>
 </html>

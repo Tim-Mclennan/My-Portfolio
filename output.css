@@ -1,4 +1,5 @@
 /* PREFACE - For this scss file, I have decided to use the BEM notation to structure my properties. BEM stands for 'Block__Element--Modifier'. Using BEM is an efficient way to change and edit CSS properties at a large scale.*/
+/* Another important aspect about my portfolio is catering towards a mobile first design. More information about this implementation is in '_screen-sizes.scss */
 /* I have also included the use of external pre-set SCSS variables which contain properties such as colour themes and screen sizes. Using external SCSS files for preset variables is a great tool to use for larger, complex projects as it makes CSS more modular and easier to read.
 
 These external properties are located within a seperate directory (scss-docs) and will be imported with the commands below: */
@@ -25,34 +26,21 @@ header {
   background-color: rgb(7, 14, 29);
   position: fixed;
   z-index: 10;
-}
-
-.logo {
-  text-decoration: none;
-}
-.logo__color {
-  color: #1b41ff;
-}
-.logo__bold {
-  font-weight: 600;
-}
-.logo__size {
-  font-size: 2rem;
+  display: flex;
 }
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px 0;
   width: 100%;
-  margin: auto;
   font-size: 1.8rem;
 }
 @media only screen and (min-width: 480px) {
   .nav {
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    margin: auto;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -61,10 +49,55 @@ header {
     font-size: 1.2rem;
   }
 }
+.nav__logo {
+  text-decoration: none;
+  margin-left: 15px;
+}
+.nav__logo--color {
+  color: #1b41ff;
+}
+.nav__logo--bold {
+  font-weight: 600;
+}
+.nav__logo--size {
+  font-size: 2rem;
+}
+.nav__bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  right: -769px;
+  height: 100vh;
+  width: 50%;
+  background-color: #1b41ff;
+  box-shadow: 0 40px 100px rgb(0, 0, 0);
+  padding: 80px 0 0 10px;
+  transition: 0.3s;
+}
+@media only screen and (min-width: 768px) {
+  .nav__bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
 .nav__lists {
   list-style: none;
-  margin: 0px 10px;
-  padding: 0px 10px;
+  margin: 15px 0px;
+}
+.nav__lists--btn {
+  color: #ffffff;
+  font-size: 3rem;
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .nav__lists {
+    margin: 0px 10px;
+    padding: 0px 10px;
+  }
 }
 .nav__link {
   text-decoration: none;
@@ -75,21 +108,34 @@ header {
   color: #ffffff;
 }
 .nav__link:hover {
-  color: #1b41ff;
-  background-color: rgb(5, 19, 50);
   transition: ease 0.3s;
 }
 @media only screen and (min-width: 768px) {
   .nav__link:hover {
+    color: #1b41ff;
+    background-color: rgb(5, 19, 50);
     font-size: 1.3rem;
   }
 }
 .nav__link:active {
+  background-color: rgb(5, 19, 50);
   color: #1b41ff;
 }
-.nav__bar {
-  display: flex;
-  align-items: center;
+@media only screen and (min-width: 768px) {
+  .nav__link:active {
+    color: #1b41ff;
+  }
+}
+.nav__btn {
+  padding: 0px 10px;
+  font-size: 2rem;
+}
+.nav__btn--color {
+  color: #ffffff;
+}
+
+.active {
+  right: 1px;
 }
 
 /* HOME SECTION */
@@ -104,8 +150,7 @@ header {
   background-color: rgb(5, 19, 50);
 }
 .home__content {
-  max-width: 600px;
-  width: 100%;
+  min-width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;

@@ -1,5 +1,6 @@
-
 /* PREFACE - For this scss file, I have decided to use the BEM notation to structure my properties. BEM stands for 'Block__Element--Modifier'. Using BEM is an efficient way to change and edit CSS properties at a large scale.*/ 
+
+/* Another important aspect about my portfolio is catering towards a mobile first design. More information about this implementation is in '_screen-sizes.scss */
 
 /* I have also included the use of external pre-set SCSS variables which contain properties such as colour themes and screen sizes. Using external SCSS files for preset variables is a great tool to use for larger, complex projects as it makes CSS more modular and easier to read.
 
@@ -23,37 +24,21 @@ header {
     width: 100%;
     background-color: $header-color;
     position: fixed;
-    z-index: 10; //placing header on top, to avoid other elements overlapping it when scrolling.    
-}
-
-.logo {
-    text-decoration: none; //removes default underline
-
-    &__color {
-        color: $secondary-text-color;
-    }
-
-    &__bold {
-        font-weight: 600;
-    }
-
-    &__size {
-        font-size: 2rem;
-    }
+    z-index: 10; //placing header on top, to avoid other elements overlapping it when scrolling.  
+    display: flex;  
 }
 
 .nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 0; 
     width: 100%;
-    margin: auto; //This centres the nav element
-    font-size: 1.8rem;
+    font-size: 1.8rem;    
 
     @media only screen and (min-width: $tablet) { 
-        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 0; 
+        margin: auto; //This centres the nav element
     }
 
     @media only screen and (min-width: $laptop) { 
@@ -61,42 +46,106 @@ header {
     font-size: 1.2rem;
     }
 
-    &__lists {
-    list-style: none; //removes default bullet points
-    margin: 0px 10px;
-    padding: 0px 10px;
-    }
-
-    &__link {
-        text-decoration: none;
-        border-radius: 10px;
-        padding: 5px 10px; //padding between list items
-
+    &__logo {
+        text-decoration: none; //removes default underline
+        margin-left: 15px;
+    
         &--color {
-            color: $primary-text-color;
-        }
-
-        &:hover {
             color: $secondary-text-color;
-            background-color: $primary-background-color;
-            transition: ease 0.3s;
-
-            @media only screen and (min-width: $laptop) {
-                //only adding this property for laptop size screens and upwards, as this affect is not as significant on small screens.
-                font-size: 1.3rem; 
-            }
-            
         }
-
-        &:active {
-            color: $secondary-text-color;
+    
+        &--bold {
+            font-weight: 600;
+        }
+    
+        &--size {
+            font-size: 2rem;
         }
     }
 
     &__bar {
         display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -769px; //set to -769 to make sure it doesnt show on laptop screens and higher.
+        height: 100vh;
+        width: 50%;
+        background-color: $secondary-text-color;
+        box-shadow: 0 40px 100px rgba(0,0,0,1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+
+        @media only screen and (min-width: $laptop) {
+        display: flex;
+        flex-direction: row;
         align-items: center;
+        }
     }
+    
+    &__lists {
+        list-style: none; //removes default bullet points
+        margin: 15px 0px;
+
+        &--btn {
+            color: $primary-text-color;
+            font-size: 3rem;
+            cursor: pointer;
+        }
+
+        @media only screen and (min-width: $laptop) {
+        margin: 0px 10px;
+        padding: 0px 10px;
+        }
+        
+ 
+    }
+    
+    &__link {
+        text-decoration: none;
+        border-radius: 10px;
+        padding: 5px 10px; //padding between list items
+    
+        &--color {
+            color: $primary-text-color;
+        }
+
+        &:hover {
+            transition: ease 0.3s;
+
+             @media only screen and (min-width: $laptop) {
+                  color: $secondary-text-color;
+                  background-color: $primary-background-color;
+                  //only adding this property for laptop size screens and upwards, as this affect is not as significant on small screens.
+                  font-size: 1.3rem; 
+              }   
+         }
+    
+         &:active {
+            background-color: $primary-background-color;
+             color: $secondary-text-color;
+
+            @media only screen and (min-width: $laptop) {
+                color: $secondary-text-color;
+            }
+        }
+    }
+
+    &__btn {
+        padding: 0px 10px;
+        font-size: 2rem;
+
+        &--color {
+            color: $primary-text-color;
+        }
+    }
+}
+
+// This 'active' class is associated with floating the mobile/tablet menu bar from the right hand side. Check script.js:7 for functionality.
+.active {
+    right: 1px;
 }
 
 
@@ -108,13 +157,17 @@ header {
     justify-content: center; //these last two properties center the entire home section on the middle of the page.
     width: 100%;
 
+    @media only screen and (min-width: $tablet) {
+
+    }
+
     &__bgcolor {
         background-color: $primary-background-color;
     }
 
     &__content {
-        max-width: 600px; //hard-coding the width.
-        width: 100%;
+        // max-width: 600px; //hard-coding the width.
+        min-width: 100%;
         margin: auto; //centering
         display: flex;
         flex-direction: column;
