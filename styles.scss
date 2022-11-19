@@ -21,7 +21,7 @@ These external properties are located within a seperate directory (scss-docs) an
 
 /*HEADER SECTION*/
 header {
-    width: 100%;
+    width: 100vw;
     background-color: $header-color;
     position: fixed;
     z-index: 10; //placing header on top, to avoid other elements overlapping it when scrolling.  
@@ -30,20 +30,21 @@ header {
 
 .nav {
     width: 100%;
-    font-size: 1.8rem;    
+    font-size: 1.8rem; 
+    padding: 0px 20px; 
+    height: 80px; // hardcoding the height
 
     @media only screen and (min-width: $tablet) { 
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 20px;
-        padding: 20px 0; 
-        margin: auto; //This centres the nav element
+        // justify-content: center;
+        // gap: 20px;
+        margin: auto; // centres the nav element
     }
 
     @media only screen and (min-width: $laptop) { 
-    justify-content: space-around; //seperating the logo from nav links
-    font-size: 1.2rem;
+    font-size: 1rem;
+    justify-content: space-between; //seperating the logo from nav links
     }
 
     &__logo {
@@ -64,6 +65,8 @@ header {
     }
 
     &__bar {
+
+        @media only screen and (max-width: $laptop - 1px) {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -77,11 +80,13 @@ header {
         box-shadow: 0 40px 100px rgba(0,0,0,1);
         padding: 80px 0 0 10px;
         transition: 0.3s;
+        }
 
         @media only screen and (min-width: $laptop) {
         display: flex;
         flex-direction: row;
         align-items: center;
+        padding: 10px 10px;
         }
     }
     
@@ -93,14 +98,15 @@ header {
             color: $primary-text-color;
             font-size: 3rem;
             cursor: pointer;
+            @media only screen and (min-width: $laptop) {
+                display: none;
+            }
         }
 
         @media only screen and (min-width: $laptop) {
-        margin: 0px 10px;
         padding: 0px 10px;
+        margin: 0;
         }
-        
- 
     }
     
     &__link {
@@ -119,7 +125,7 @@ header {
                   color: $secondary-text-color;
                   background-color: $primary-background-color;
                   //only adding this property for laptop size screens and upwards, as this affect is not as significant on small screens.
-                  font-size: 1.3rem; 
+                  font-size: 1.2rem; 
               }   
          }
     
@@ -136,6 +142,10 @@ header {
     &__btn {
         padding: 0px 10px;
         font-size: 2rem;
+        
+        @media only screen and (min-width: $laptop) {
+            display: none;
+        }
 
         &--color {
             color: $primary-text-color;
@@ -157,37 +167,43 @@ header {
     justify-content: center; //these last two properties center the entire home section on the middle of the page.
     width: 100%;
 
-    @media only screen and (min-width: $tablet) {
-
-    }
-
     &__bgcolor {
         background-color: $primary-background-color;
     }
 
     &__content {
-        // max-width: 600px; //hard-coding the width.
-        min-width: 100%;
+        max-width: 600px; //hard-coding the width.
+        width: 100%;
         margin: auto; //centering
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        position: relative;
+        justify-content: flex-start;
+        // column-gap: 10px;
         margin-top: 60px;
+        @media only screen and (min-width: $tablet) {
+            margin-top: 80px;
+
+        }
     }
 
     &__img {
-        width: 350px;
-        height: 350px;
-        border-radius: 50%; //making the picture into a circle instead of a rectangle.
-        overflow: hidden;
-        margin: auto;
-        transform: scale(0.7,0.7);
+        // overflow: hidden;
+        margin: auto;  
 
         &--photo {
-            object-position: center;
-            object-fit:contain;
+            width: 150px;
+            height: 150px;
+
+            @media only screen and (min-width: $tablet) {
+                width: 250px;
+                height: 250px;
+            }
+
+            @media only screen and (min-width: $laptop) {
+                width: 350px;
+                height: 350px;
+            }
         }
     }
 
@@ -268,7 +284,7 @@ header {
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
-        width: 900px;
+        max-width: 900px;
         margin: auto;
         column-gap: 100px;
     }
