@@ -32,7 +32,6 @@ header {
     width: 100%;
     font-size: 1.8rem; 
     padding: 0px 20px; 
-    height: 80px; // hardcoding the height
 
     @media only screen and (min-width: $tablet) { 
         display: flex;
@@ -45,6 +44,8 @@ header {
     @media only screen and (min-width: $laptop) { 
     font-size: 1rem;
     justify-content: space-between; //seperating the logo from nav links
+    height: 80px; // hardcoding the height
+
     }
 
     &__logo {
@@ -161,11 +162,18 @@ header {
 
 /* HOME SECTION */
 .home {
-    min-height: 750px;
+    min-height: 550px;
     display: flex;
     align-items: center;
     justify-content: center; //these last two properties center the entire home section on the middle of the page.
     width: 100%;
+
+    @media only screen and (min-width: $tablet) {
+        min-height: 650px;
+    }
+    @media only screen and (min-width: $laptop) {
+        min-height: 800px;
+    }
 
     &__bgcolor {
         background-color: $primary-background-color;
@@ -179,11 +187,17 @@ header {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        // column-gap: 10px;
-        margin-top: 60px;
-        @media only screen and (min-width: $tablet) {
-            margin-top: 80px;
+        gap: 30px;
+        margin-top: 80px;
+        padding: 0px 15px;
 
+        @media only screen and (min-width: $tablet) {
+            justify-content: center;
+            gap: 0px;
+        }
+
+        @media only screen and (min-width: $laptop) {
+            margin-top: 100px;
         }
     }
 
@@ -196,13 +210,13 @@ header {
             height: 150px;
 
             @media only screen and (min-width: $tablet) {
-                width: 250px;
-                height: 250px;
+                width: 200px;
+                height: 200px;
             }
 
             @media only screen and (min-width: $laptop) {
-                width: 350px;
-                height: 350px;
+                width: 300px;
+                height: 300px;
             }
         }
     }
@@ -211,13 +225,21 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         text-align: center;
+
+        @media only screen and (min-width: $tablet) {
+            justify-content: center;
+        }
     }
 
     &__header {
-        font-size: 60px;
+        font-size: 50px;
         font-weight: 500;
+
+        @media only screen and (min-width: $tablet) {
+            font-size: 60px;
+        }
 
         &--white {
             color: $primary-text-color;
@@ -228,8 +250,12 @@ header {
     }
 
     &__para {
-        font-size: 20px;
+        font-size: 15px;
         margin-top: 15px;
+
+        @media only screen and (min-width: $tablet) {
+            font-size: 20px;
+        }
 
         &--white {
             color: $primary-text-color;
@@ -238,7 +264,7 @@ header {
             color: $secondary-text-color;
         }
         &--bold {
-            font-weight: 700;
+            font-weight: 600;
         }
     }
 
@@ -260,10 +286,125 @@ header {
                 background-color: $secondary-text-color;
                 transition: 0.3s;
             }
+
+            // &:active {
+            //     @media only screen and (max-width: $tablet -1px) {
+            //     border-radius: 30%;
+            //     background-color: $secondary-text-color;
+            //     transition: 0.3s;
+            //     }   
+            // }
         }
     }
 }
 
+/* SKILLS SECTION */
+.skills {
+    width: 100%;
+    padding: 10px 10px 60px 10px;
+
+    &__bgcolor {
+        background-color: $primary-background-color;
+    }
+
+    &__heading {
+        font-size: 5rem;
+
+        @media only screen and (min-width: $tablet) {
+            font-size: 6rem;
+            margin-bottom: 30px;
+        }
+        @media only screen and (min-width: $laptop) {
+            font-size: 6rem;
+        }
+
+        &--color {
+            color: $section-header-color;
+        }
+        &--center {
+            text-align: center;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        @media only screen and (min-width: $laptop) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        &--grid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 20px;
+            justify-content: center;
+            // margin: auto;
+
+            @media only screen and (min-width: $tablet) {
+                gap: 30px;
+            }
+            @media only screen and (min-width: $laptop) {
+                grid-template-columns: repeat(5, 1fr);
+            }
+
+            &--card {
+                color: $primary-text-color;
+                width: 90px;
+                height: 110px;
+                border-radius: 20px;
+                border: 3px solid $secondary-text-color;
+                background-color: $header-color;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                @media only screen and (min-width: $tablet) {
+                    width: 100px;
+                    height: 120px;
+                }
+                
+                &:hover {
+                    box-shadow: 10px 10px 40px $third-text-color;
+                    transition: 0.5s;
+                }
+                &--icon {
+                    font-size: 3rem;
+                    @media only screen and (min-width: $tablet) {
+                        font-size: 4rem;
+                    }
+                }
+                &--para {
+                    font-size: 0.8rem;
+                    @media only screen and (min-width: $tablet) {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        &--info {
+            color: $primary-text-color;
+            font-weight: 500;
+            font-size: 1.2rem;
+            
+            &--color {
+                color: $primary-text-color;
+            }
+
+            &--list {
+                list-style-type: square;
+            }
+        }
+    }
+
+}
 
 /* ABOUT SECTION */
 .about {
@@ -274,32 +415,60 @@ header {
     }
 
     &__heading {
-        color: $section-header-color;
-        font-size: 6rem;
-        text-align: center;
+        font-size: 4.5rem;
+
+        @media only screen and (min-width: $tablet) {
+            font-size: 6rem;
+        }
+        @media only screen and (min-width: $laptop) {
+            font-size: 7rem;
+        }
+
+        &--color {
+            color: $section-header-color;
+        }
+        &--center {
+            text-align: center;
+        }
     }
 
     &__content {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
-        flex-direction: row;
-        max-width: 900px;
+        flex-direction: column;
+        width: 100%;
         margin: auto;
         column-gap: 100px;
+        padding: 0px 15px;
+
+        @media only screen and (min-width: $laptop) {
+            flex-direction: row;
+            column-gap: 100px;
+            width: 70vw;
+        }
     }
 
     &__intro {
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+
+        @media only screen and (min-width: $laptop) {
+            align-items: flex-start;
+            text-align: left;
+        }
 
         &--title {
             color: $primary-text-color;
             font-weight: 500;
-            font-size: 2rem;
+            font-size: 1.5rem;
             margin: 2rem 0; //provides margin of 1 X 'root element' size at the top and bottom, and 0 on the sides.
+            @media only screen and (min-width: $laptop) {
+                font-size: 2rem;
+            }
         }
         &--btn {
             display: flex;
@@ -312,6 +481,7 @@ header {
             align-items: center;
             text-decoration: none;
             font-size: larger;
+            width: 200px;
 
             &:hover {
                 background-color: $secondary-text-color;
@@ -321,21 +491,5 @@ header {
     }
     &__text {
         color: $primary-text-color;
-    }
-}
-
-/* SKILLS SECTION */
-.skills {
-    width: 100%;
-    padding: 50px;
-
-    &__bgcolor {
-        background-color: $primary-background-color;
-    }
-
-    &__heading {
-        color: $section-header-color;
-        font-size: 6rem;
-        text-align: center;
     }
 }
