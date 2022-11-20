@@ -400,6 +400,16 @@ header {
 
             &--list {
                 list-style-type: square;
+                margin-left: 50px;
+
+                &--blt {
+                    margin: 10px 0px;
+
+                    &--end {
+                        color: $secondary-text-color;
+                        // font-size:xx-large;
+                    }
+                }
             }
         }
     }
@@ -434,18 +444,20 @@ header {
 
     &__content {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
         flex-direction: column;
         width: 100%;
         margin: auto;
         column-gap: 100px;
         padding: 0px 15px;
+        width: 90vw;
+
+
 
         @media only screen and (min-width: $laptop) {
             flex-direction: row;
-            column-gap: 100px;
-            width: 70vw;
+            width: 80vw;
         }
     }
 
@@ -491,5 +503,6 @@ header {
     }
     &__text {
         color: $primary-text-color;
+        margin-top: 20px;
     }
 }

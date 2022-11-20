@@ -383,6 +383,13 @@ header {
 }
 .skills__content--info--list {
   list-style-type: square;
+  margin-left: 50px;
+}
+.skills__content--info--list--blt {
+  margin: 10px 0px;
+}
+.skills__content--info--list--blt--end {
+  color: #1b41ff;
 }
 
 /* ABOUT SECTION */
@@ -413,19 +420,19 @@ header {
 }
 .about__content {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   width: 100%;
   margin: auto;
   column-gap: 100px;
   padding: 0px 15px;
+  width: 90vw;
 }
 @media only screen and (min-width: 768px) {
   .about__content {
     flex-direction: row;
-    column-gap: 100px;
-    width: 70vw;
+    width: 80vw;
   }
 }
 .about__intro {
@@ -471,4 +478,5 @@ header {
 }
 .about__text {
   color: #ffffff;
+  margin-top: 20px;
 }
