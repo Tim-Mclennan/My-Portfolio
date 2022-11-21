@@ -159,7 +159,6 @@ header {
     right: 1px;
 }
 
-
 /* HOME SECTION */
 .home {
     min-height: 550px;
@@ -252,6 +251,8 @@ header {
     &__para {
         font-size: 15px;
         margin-top: 15px;
+        width: 80vw;
+
 
         @media only screen and (min-width: $tablet) {
             font-size: 20px;

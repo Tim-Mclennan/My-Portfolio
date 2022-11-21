@@ -243,6 +243,7 @@ header {
 .home__para {
   font-size: 15px;
   margin-top: 15px;
+  width: 80vw;
 }
 @media only screen and (min-width: 480px) {
   .home__para {
