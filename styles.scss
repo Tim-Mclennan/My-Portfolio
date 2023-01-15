@@ -31,7 +31,7 @@ header {
 .nav {
     width: 100%;
     font-size: 1.8rem; 
-    padding: 0px 20px; 
+    padding: 0px 10px; 
 
     @media only screen and (min-width: $tablet) { 
         display: flex;
@@ -97,7 +97,6 @@ header {
 
         &--btn {
             color: $primary-text-color;
-            font-size: 3rem;
             cursor: pointer;
             @media only screen and (min-width: $laptop) {
                 display: none;
@@ -162,6 +161,7 @@ header {
 /* HOME SECTION */
 .home {
     min-height: 550px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center; //these last two properties center the entire home section on the middle of the page.
@@ -299,10 +299,109 @@ header {
     }
 }
 
+/* PROJECTS SECTION */
+.projects {
+    width: 100%;
+    padding: 40px 10px 60px 10px;
+
+    @media only screen and (min-width: $laptop) {
+        padding-top: 70px;
+    }
+    
+    &__bgcolor{
+        background-color: $primary-background-color;
+    }
+    
+    &__heading {
+        font-size: 4rem;
+        margin-bottom: 20px;
+
+        @media only screen and (min-width: $tablet) {
+            font-size: 6rem;
+            margin-bottom: 30px;
+        }
+
+        &--color {
+            color: $section-header-color;
+        }
+        &--center {
+            text-align: center;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        
+        &__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100%;
+            gap: 20px;
+
+            &__link {
+                text-decoration: none;
+            }
+
+            @media only screen and (min-width: $laptop) {
+                flex-direction: row;
+            }
+
+            &__project {
+                width: 90%;
+                height: 400px;
+                background-color: $third-text-color;
+                padding: 10px;
+                border-radius: 10px;
+
+                @media only screen and (min-width: $laptop) {
+                    width: 400px;
+                }
+
+                &__Img {
+                    height: 55%;
+                    width: 100%;
+
+                    &__Thumbnail {
+                        width: 100%;
+                        height: 100%;
+                        background-size: contain;
+                    }
+                }
+
+                &__content {
+                    margin-top: 5px;
+
+                    @media only screen and (min-width: $laptop) {
+                        margin-top: 15px;
+                    }
+
+                    &__Title {
+                        color: $primary-text-color;
+                        font-weight: 500;
+                        font-size: 2rem;
+                        font-style: italic;
+                    }
+
+                    &__Description {
+                        color: $primary-text-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* SKILLS SECTION */
 .skills {
     width: 100%;
-    padding: 10px 10px 60px 10px;
+    padding: 40px 10px 60px 10px;
+
+    @media only screen and (min-width: $laptop) {
+        padding-top: 70px;
+    }
 
     &__bgcolor {
         background-color: $primary-background-color;
@@ -314,9 +413,6 @@ header {
         @media only screen and (min-width: $tablet) {
             font-size: 6rem;
             margin-bottom: 30px;
-        }
-        @media only screen and (min-width: $laptop) {
-            font-size: 6rem;
         }
 
         &--color {
