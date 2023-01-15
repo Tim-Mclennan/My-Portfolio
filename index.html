@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tim's Portfolio</title>
     <!-- Link below will be referring to external stylesheet, however, I will be editing in SCSS file (styles.scss) for efficiency. -->
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="styles.css">
     <!-- Link below connects to an external site that provides icons/logos. -->
     <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
 
@@ -40,12 +40,69 @@
             </div>
             <div class="home__info">
                 <h1 class="home__header home__header--white">Hi! I'm <span class="home__header--blue">Tim.</span></h1>
-                <p class="home__para home__para--white">I'm a highly motivated, coffee-fuelled <span class="home__para--blue home__para--bold">software developer.</span><br>Here's a little bit more about me:</p>
+                <p class="home__para home__para--white">I'm a highly motivated, coffee-fuelled <span class="home__para--blue home__para--bold">software developer.</span><br>Ask me anything:</p>
                 <div class="home__social">
                     <a href="https://github.com/Tim-Mclennan"><i class='home__social--links bx bxl-github'></i></a>
                     <a href="https://www.linkedin.com/in/tim-mclennan-0563341aa/"><i class='home__social--links bx bxl-linkedin-square'></i></a>
                     <a href="mailto: timmymclennan@gmail.com"><i class='home__social--links bx bx-envelope'></i></a>
                 </div>
+            </div>
+        </div>
+    </section>
+    <!-- PROJECTS SECTION -->
+    <section class="projects projects__bgcolor" id="projectsSection"> 
+        <h1 class="projects__heading projects__heading--center projects__heading--color">PROJECTS</h1>
+        <div class="projects__content">
+            <div class="projects__content__container">
+                <a class="projects__content__container__link"  href="https://startling-liger-581815.netlify.app/">
+                    <div class="projects__content__container__project">
+                        <div class="projects__content__container__project__Img">
+                            <img class="projects__content__container__project__Img__Thumbnail" src="./External-Files/TimTubeThumbnail.JPG" />
+                        </div>
+                        <div class="projects__content__container__project__content">
+                            <p class="projects__content__container__project__content__Title">TimTube</p>
+                            <p class="projects__content__container__project__content__Description">Fully functional YouTube clone built with HTML, CSS, SASS/SCSS and React. Fetched API data from YouTube using Axios to display video feeds, including default categories.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a class="projects__content__container__link"  href="https://tim-mclennan.github.io/Google-Book-Search/">
+                    <div class="projects__content__container__project">
+                        <div class="projects__content__container__project__Img">
+                            <img class="projects__content__container__project__Img__Thumbnail" src="./External-Files/GoogleBooksThumbnail.jfif" />
+                        </div>
+                        <div class="projects__content__container__project__content">
+                            <p class="projects__content__container__project__content__Title">Google Books Search</p>
+                            <p class="projects__content__container__project__content__Description">Fully responsive web app built using HTML, CSS, JS and SASS/SCSS. Utilises the 'Google Books' API to retrieve JSON data.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a class="projects__content__container__link"  href="https://tim-mclennan.github.io/ios_clone/">
+                    <div class="projects__content__container__project">
+                        <div class="projects__content__container__project__Img">
+                            <img class="projects__content__container__project__Img__Thumbnail" src="./External-Files/IphoneThumbnail.jfif" />
+                        </div>
+                        <div class="projects__content__container__project__content">
+                            <p class="projects__content__container__project__content__Title">Iphone</p>
+                            <p class="projects__content__container__project__content__Description">This iphone has a functional home button and currently has 2 working apps (Settings and camera). currently working on implementing a functional lock screen and API data.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a class="projects__content__container__link"  href="#homeSection">
+                    <div class="projects__content__container__project">
+                        <div class="projects__content__container__project__Img">
+                            <img class="projects__content__container__project__Img__Thumbnail" src="./External-Files/PortfolioThumbnail.jfif" />
+                        </div>
+                        <div class="projects__content__container__project__content">
+                            <p class="projects__content__container__project__content__Title">Portfolio</p>
+                            <p class="projects__content__container__project__content__Description">
+                                Portfolio built with HTML, CSS, JS & SCSS.
+                            </p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -124,10 +181,6 @@
         </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section class="projects" id="projectsSection"> 
-
-    </section>
     <!-- CONTACT SECTION -->
 
     <script src="script.js"></script>
