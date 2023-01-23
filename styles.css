@@ -180,7 +180,7 @@ header {
   align-items: center;
   justify-content: flex-start;
   gap: 30px;
-  margin-top: 80px;
+  margin-top: 100px;
   padding: 0px 15px;
 }
 @media only screen and (min-width: 480px) {
@@ -195,7 +195,7 @@ header {
   }
 }
 .home__img {
-  margin: auto;
+  margin-top: 30px;
 }
 .home__img--photo {
   width: 150px;
@@ -334,6 +334,10 @@ header {
   padding: 10px;
   border-radius: 10px;
 }
+.projects__content__container__project:hover {
+  background-color: #1b41ff;
+  transition: ease 0.3s;
+}
 @media only screen and (min-width: 768px) {
   .projects__content__container__project {
     width: 400px;
@@ -351,19 +355,14 @@ header {
 .projects__content__container__project__content {
   margin-top: 5px;
 }
-@media only screen and (min-width: 768px) {
-  .projects__content__container__project__content {
-    margin-top: 15px;
-  }
-}
 .projects__content__container__project__content__Title {
   color: #ffffff;
   font-weight: 500;
   font-size: 2rem;
-  font-style: italic;
 }
 .projects__content__container__project__content__Description {
   color: #ffffff;
+  font-size: 0.9rem;
 }
 
 /* SKILLS SECTION */
@@ -484,12 +483,13 @@ header {
 /* ABOUT SECTION */
 .about {
   width: 100%;
+  padding: 40px 10px 60px 10px;
 }
 .about__bgcolor {
   background-color: rgb(5, 19, 50);
 }
 .about__heading {
-  font-size: 4.5rem;
+  font-size: 4rem;
 }
 @media only screen and (min-width: 480px) {
   .about__heading {

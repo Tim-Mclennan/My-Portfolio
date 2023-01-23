@@ -98,6 +98,7 @@ header {
         &--btn {
             color: $primary-text-color;
             cursor: pointer;
+
             @media only screen and (min-width: $laptop) {
                 display: none;
             }
@@ -115,7 +116,7 @@ header {
         padding: 5px 10px; //padding between list items
     
         &--color {
-            color: $primary-text-color;
+            color: $primary-text-color; 
         }
 
         &:hover {
@@ -187,7 +188,7 @@ header {
         align-items: center;
         justify-content: flex-start;
         gap: 30px;
-        margin-top: 80px;
+        margin-top: 100px;
         padding: 0px 15px;
 
         @media only screen and (min-width: $tablet) {
@@ -201,8 +202,7 @@ header {
     }
 
     &__img {
-        // overflow: hidden;
-        margin: auto;  
+        margin-top: 30px;
 
         &--photo {
             width: 150px;
@@ -356,6 +356,11 @@ header {
                 padding: 10px;
                 border-radius: 10px;
 
+                &:hover {
+                    background-color: $secondary-text-color;
+                    transition: ease 0.3s;
+                }
+
                 @media only screen and (min-width: $laptop) {
                     width: 400px;
                 }
@@ -374,19 +379,15 @@ header {
                 &__content {
                     margin-top: 5px;
 
-                    @media only screen and (min-width: $laptop) {
-                        margin-top: 15px;
-                    }
-
                     &__Title {
                         color: $primary-text-color;
                         font-weight: 500;
                         font-size: 2rem;
-                        font-style: italic;
                     }
 
                     &__Description {
                         color: $primary-text-color;
+                        font-size: 0.9rem;
                     }
                 }
             }
@@ -516,13 +517,14 @@ header {
 /* ABOUT SECTION */
 .about {
     width: 100%;
+    padding: 40px 10px 60px 10px;
 
     &__bgcolor{
         background-color: $primary-background-color;
     }
 
     &__heading {
-        font-size: 4.5rem;
+        font-size: 4rem;
 
         @media only screen and (min-width: $tablet) {
             font-size: 6rem;
