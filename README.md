@@ -2,7 +2,7 @@
 
 
 ## 🚀 About Me
-I'm a fullstack software engineer with a focus on the frontend. 
+I'm a fullstack software engineer. 
 
 I love solving problems and continuously teaching myself new concepts. I have years of professional experience and seeking to develop myself in a technical team. 
 
