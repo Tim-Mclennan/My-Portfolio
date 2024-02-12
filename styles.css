@@ -365,6 +365,11 @@ header {
   font-size: 0.9rem;
 }
 
+.projects__content__container__project__content__Description--button {
+  background-color: #1b41ff;
+  font-size: 0.9rem;
+}
+
 /* SKILLS SECTION */
 .skills {
   width: 100%;
