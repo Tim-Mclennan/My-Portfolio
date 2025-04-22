@@ -2,9 +2,9 @@
 
 
 ## 🚀 About Me
-I'm a frontend software engineer. 
+I'm a Senior Solutions Engineer. 
 
-I love solving problems and continuously teaching myself new concepts. I have over 3 years of professional experience and seeking to take on exciting roles within the frontend space. 
+I love solving problems and continuously teaching myself new concepts. I have over 4 years of professional experience and seeking to take on exciting roles. 
 
 Please find the deployed link of my portfolio here: 
 https://tim-mclennan.github.io/My-Portfolio
