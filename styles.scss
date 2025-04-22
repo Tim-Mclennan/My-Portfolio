@@ -440,7 +440,7 @@ header {
         &--grid {
             display: grid;
             grid-template-columns: auto auto auto;
-            gap: 20px;
+            gap: 15px;
             justify-content: center;
             // margin: auto;
 
@@ -453,8 +453,8 @@ header {
 
             &--card {
                 color: $primary-text-color;
-                width: 150px;
-                height: 200px;
+                width: 90px;
+                height: 110px;
                 border-radius: 20px;
                 border: 3px solid $secondary-text-color;
                 background-color: $header-color;
@@ -465,8 +465,8 @@ header {
                 padding: 50px;
 
                 @media only screen and (min-width: $tablet) {
-                    width: 100px;
-                    height: 120px;
+                    width: 150px;
+                    height: 200px;
                 }
                 
                 &:hover {
@@ -474,7 +474,7 @@ header {
                     transition: 0.5s;
                 }
                 &--icon {
-                    font-size: 3rem;
+                    font-size: 1.5rem;
                     @media only screen and (min-width: $tablet) {
                         font-size: 4rem;
                     }
