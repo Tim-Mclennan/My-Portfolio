@@ -2,9 +2,8 @@
 
 
 ## 🚀 About Me
-I'm a Senior Solutions Engineer. 
 
-I love solving problems and continuously teaching myself new concepts. I have over 4 years of professional experience and seeking to take on exciting roles. 
+I love solving problems and continuously teaching myself new concepts. I have over 2 years of professional experience and seeking to take on exciting roles to build upon my skills. 
 
 Please find the deployed link of my portfolio here: 
 https://tim-mclennan.github.io/My-Portfolio
