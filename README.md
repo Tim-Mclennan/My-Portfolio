@@ -3,7 +3,7 @@
 
 ## 🚀 About Me
 
-I love solving problems and continuously teaching myself new concepts. I have over 2 years of professional experience and seeking to take on exciting roles to build upon my skills. 
+I love solving problems and continuously teaching myself new concepts, both technical and interpersonal.
 
 Please find the deployed link of my portfolio here: 
 https://tim-mclennan.github.io/My-Portfolio
